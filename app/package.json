@@ -1,0 +1,42 @@
+{
+  "name": "###project_name_lower_case###",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --mode development --open --hot ",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "webpack --config webpack.prod.js "
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setups/enzyme.js"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "axios": "^0.19.2",
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
+  },
+  "devDependencies": {
+    "@babel/compat-data": "~7.8.0",
+    "@babel/core": "7.8.4",
+    "@babel/preset-env": "7.8.4",
+    "@babel/preset-react": "7.8.3",
+    "babel-loader": "8.0.6",
+    "html-webpack-plugin": "3.2.0",
+    "prettier": "1.16.4",
+    "webpack": "4.29.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
